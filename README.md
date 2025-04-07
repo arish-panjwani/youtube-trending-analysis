@@ -1,61 +1,97 @@
-# 📈 YouTube Trending Video Analysis
+# 📈 YouTube Trending Video Analysis & Dashboard
 
-This project explores the patterns and insights hidden behind trending YouTube videos using data from Kaggle. It focuses on visualizing trends, understanding sentiment in video titles, and uncovering what makes content popular.
+This project explores what makes YouTube videos trend using data from [Kaggle](https://www.kaggle.com/datasets/datasnaek/youtube-new). It combines rich **exploratory data analysis (EDA)** with an interactive **Streamlit dashboard** that visualizes YouTube trends, sentiments, and performance metrics.
 
 ---
 
 ## 🚀 Project Highlights
 
-- 📊 Exploratory Data Analysis (EDA) of views, likes, comments, etc.
-- 🧠 Sentiment analysis of video titles using TextBlob
-- 🌐 WordCloud to visualize common title trends
-- 📉 Correlation heatmap for key performance metrics
-- 🗂️ Dataset: [Kaggle - YouTube Trending Video Dataset](https://www.kaggle.com/datasets/datasnaek/youtube-new)
+- 📊 EDA of views, likes, comments, publish dates, etc.
+- ☁️ WordClouds of trending video titles
+- 🧠 Sentiment analysis using TextBlob
+- 🔥 `days_to_trend` analysis to track how fast a video trends
+- 🎯 Category-based filtering in dashboard
+- 🌐 Live Streamlit dashboard for interactive insights
 
 ---
 
-## 🔧 Tech Stack
+## 🔗 Live Dashboard
 
-- **Google Colab / Jupyter Notebook**
-- Python
-  - `pandas`, `matplotlib`, `seaborn`
-  - `wordcloud`, `textblob`
+👉 [youtube-trends-analysis.streamlit.app](https://youtube-trends-analysis.streamlit.app/)
 
 ---
 
-## 📁 Files
+## 📁 File Structure
 
-| File Name                     | Description                                |
-|------------------------------|--------------------------------------------|
-| `YouTube_Trending_Analysis.ipynb` | Main analysis notebook (Colab ready)       |
-| `USvideos.csv`               | Dataset file (optional to include or link) |
+| File                              | Description                                       |
+|-----------------------------------|---------------------------------------------------|
+| `YouTube_Trending_Analysis.ipynb`| EDA and preprocessing notebook (Colab/Jupyter)    |
+| `processed_youtube_data.csv`     | Cleaned CSV used by Streamlit app                 |
+| `App.py`                          | Streamlit dashboard source code                   |
+| `requirements.txt`               | Python dependencies for deployment                |
+| `README.md`                       | You're reading it!                                |
 
 ---
 
-## 📊 Key Insights
+## 📌 Project Summary
 
-- Most trending videos belong to Entertainment and Music categories.
-- Positive and neutral sentiments dominate video titles.
-- Strong correlation between views, likes, and comment counts.
-- Some channels consistently have multiple trending videos.
+This dashboard analyzes trending YouTube videos in the US using a dataset from Kaggle. It includes visualizations of viewership patterns, title sentiment, top-performing channels, and how long videos take to trend. Use the sidebar to filter by category and explore meaningful insights interactively.
 
 ---
 
 ## 🧪 How to Run
 
-1. Open the notebook on [Google Colab](https://colab.research.google.com/)
-2. Upload the `USvideos.csv` dataset from [Kaggle](https://www.kaggle.com/datasets/datasnaek/youtube-new)
-3. Run the cells in order to explore and visualize the data
+### 🔬 Run Locally
+
+```bash
+git clone https://github.com/arish-panjwani/youtube-trending-analysis.git
+cd youtube-trending-analysis
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Make sure `processed_youtube_data.csv` is in the same directory as `app.py`.
+
+### ☁️ Deploy on Streamlit Cloud
+
+1. Push your project (with `requirements.txt`) to GitHub
+2. Go to [Streamlit Cloud](https://streamlit.io/cloud)
+3. Connect your repo and click **Deploy**
 
 ---
 
-## 📌 License
+## 📊 Key Insights
 
-This project is for educational purposes under the [MIT License](LICENSE).
+- **Entertainment** and **Music** dominate trending categories.
+- **Positive and neutral** sentiments are common in video titles.
+- Top trending videos often surface within **1–3 days** of upload.
+- Channels with consistent branding trend more frequently.
+- **Views, likes, and comments** are strongly correlated.
+
+---
+
+## 🔧 Tech Stack
+
+- **Python**
+  - `pandas`, `matplotlib`, `seaborn`
+  - `wordcloud`, `textblob`
+- **Jupyter / Colab** for EDA
+- **Streamlit** for dashboard
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
 ## 🙌 Acknowledgments
 
 - [Kaggle Dataset by Data is Beautiful](https://www.kaggle.com/datasets/datasnaek/youtube-new)
-- YouTube API & Data Team
+- [Streamlit](https://streamlit.io/)
+- YouTube Data API (for category mapping)
+
+---
+
+Made with ❤️ by [Arish Panjwani](https://github.com/arish-panjwani)
